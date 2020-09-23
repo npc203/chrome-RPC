@@ -1,5 +1,6 @@
 from pywinauto import Application
 from pypresence import Presence
+import time
 
 #Setting up RPC stuff
 client_id = 'YOUR CLIENT ID' #PASTE UR TOKEN HERE
