@@ -11,8 +11,8 @@
 3. Run the `chrome RPC.py` 
 
 ```shell
-git clone 
-cd 
+git clone https://github.com/npc203/chrome-RPC.git
+cd chrome-RPC
 pip install -r requirements.txt
 python "chrome RPC.py"
 ```
