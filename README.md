@@ -32,6 +32,14 @@ Just goto the discord developer portal and make an app.
    probably a bad idea, idk remove it, if needed.
 4. <Fill here> I'm pretty sure there are more.
 
+## TODOS:
+- Make it so that the code runs in the background
+- Add some sort of QT GUI for more control
+- Add support for other browsers
+- Why not extend it to other tabs rather than Ytb alone?!
+- More stable and reliable way of getting the tabs
+- package it (far far far future)
+
 ### Footer stuff?:
 - Any PR's, issues, features, improvements are always welcome,
 - The debug folder is just junk files, delete them if you want
