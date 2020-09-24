@@ -1,4 +1,7 @@
 # A Chrome Youtube RPC for discord:
+
+[![pypresence](https://img.shields.io/badge/using-pypresence-00bb88.svg?style=for-the-badge&logo=discord)](https://github.com/qwertyquerty/pypresence) [![license](https://img.shields.io/github/license/qwertyquerty/pypresence.svg?style=for-the-badge)](https://github.com/npc203/chrome-RPC/blob/branch/LICENSE)
+
 ![Imgur](https://i.imgur.com/r90l0KG.png)
 > if this works for you, then it's nothing short of a miracle. Just another fun project.
 > Unstable, you better have some knowledge of python and pywinauto else don't even bother cloning the repo unless you want to learn something from this.

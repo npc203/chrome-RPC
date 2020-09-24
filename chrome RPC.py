@@ -3,7 +3,7 @@ from pypresence import Presence
 import time
 
 #Setting up RPC stuff
-client_id = 'YOUR CLIENT ID' #PASTE UR TOKEN HERE
+client_id = 'YOUR CLIENT ID' #PASTE UR CLIENT ID HERE
 RPC = Presence(client_id,pipe=0) 
 RPC.connect()
 
@@ -17,13 +17,17 @@ ytb = app.Pane.child_window(title_re=".*YouTube.*",control_type="TabItem")
 def get_song():
     """getting the video name from the header file"""
     song = ytb.window_text()
-    #print(song)
-    spliting = song.split('-')[:-2] 
+    #print(song) 
     if "Audio playing" in song:
-        if len(spliting)>1:
+        song = '-'.join(song.split('-')[:-2])
+        if '→' in song:
+            spliting = song.split('→')
+            return spliting[0],'→'.join(spliting[1:])
+        elif '-' in song:
+            spliting = song.split('-')[:-2]
             return spliting[0],'-'.join(spliting[1:])
         else:
-            return '-'.join(spliting),'....'
+            return song,'....'
     else:
         return "Idling","we doe be vibin"
 
@@ -39,7 +43,7 @@ while True:
     except Exception as e:
         print("####",e)
         RPC.update(details="Idling",
-                        state="we doe be vibin",
+                        state="Silence",
                         large_image='youtube',
                         )  
     time.sleep(15) # Can only update rich presence every 15 seconds
