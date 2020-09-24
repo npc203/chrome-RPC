@@ -1,6 +1,6 @@
 from pywinauto import Application
 from pypresence import Presence
-import time
+import time,traceback
 
 #Setting up RPC stuff
 client_id = 'YOUR CLIENT ID' #PASTE UR CLIENT ID HERE
@@ -24,7 +24,7 @@ def get_song():
             spliting = song.split('→')
             return spliting[0],'→'.join(spliting[1:])
         elif '-' in song:
-            spliting = song.split('-')[:-2]
+            spliting = song.split('-')
             return spliting[0],'-'.join(spliting[1:])
         else:
             return song,'....'
@@ -41,7 +41,8 @@ while True:
                         large_image='youtube',
                         )  
     except Exception as e:
-        print("####",e)
+        print("####")
+        traceback.print_exc() 
         RPC.update(details="Idling",
                         state="Silence",
                         large_image='youtube',
